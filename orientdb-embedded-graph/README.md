@@ -25,7 +25,7 @@ $ mvn clean install
 [INFO] ------------------------------------------------------------------------
 ````
 
-Now you can you the example `Main` class
+Now you can run the example `Main` class
 
 ````bash
 $ export JAVA_HOME=/usr/lib/jvm/java-8-oracle &&  mvn exec:java -Dexec.mainClass=eu.infomas.research.orientdb.Main

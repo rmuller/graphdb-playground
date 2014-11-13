@@ -21,7 +21,52 @@
             <groupId>com.orientechnologies</groupId>
             <artifactId>orientdb-graphdb</artifactId>
             <version>${orientdb.version}</version>
-
+            <exclusions>
+                <!-- these dependencies should be optional -->
+                <exclusion>
+                    <groupId>com.orientechnologies</groupId>
+                    <artifactId>orientdb-server</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.orientechnologies</groupId>
+                    <artifactId>orientdb-enterprise</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.orientechnologies</groupId>
+                    <artifactId>orientdb-tools</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.tinkerpop</groupId>
+                    <artifactId>pipes</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.tinkerpop.gremlin</groupId>
+                    <artifactId>gremlin-java</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.tinkerpop.gremlin</groupId>
+                    <artifactId>gremlin-groovy</artifactId>
+                </exclusion>
+                <!-- not needed if LongIDVertexCache is not used -->
+                <exclusion>
+                    <groupId>colt</groupId>
+                    <artifactId>colt</artifactId>
+                </exclusion>
+                <!-- not needed if graphson is not used -->
+                <exclusion>
+                    <groupId>org.codehaus.jettison</groupId>
+                    <artifactId>jettison</artifactId>     
+                </exclusion>
+                <exclusion>
+                    <groupId>com.fasterxml.jackson.datatype</groupId>
+                    <artifactId>jackson-datatype-json-org</artifactId>     
+                </exclusion>
+                <!-- not used by OrientDB if using OrientGraphFactory -->
+                <exclusion>
+                    <artifactId>commons-configuration</artifactId>
+                    <groupId>commons-configuration</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 
