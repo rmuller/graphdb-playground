@@ -2,6 +2,13 @@ README
 ======
 
 This Maven project can be used to start developing an embedded OrientDB 2.x Graph database.
+This project template provides:
+
++ Maven build for embedded usage or OrientDB. See `pom.xml` for details of includes / excluded
+artifacts
++ Maven build also created a "all-in-one" jar
++ Sample class `eu.infomas.research.orientdb.Main`
++ Sample JUnit test class, `eu.infomas.research.orientdb.TestMain`
 
 To build this project:
 
@@ -25,10 +32,16 @@ $ mvn clean install
 [INFO] ------------------------------------------------------------------------
 ````
 
-Now you can run the example `Main` class
+Now you can run the example `Main` class by maven
 
 ````bash
 $ export JAVA_HOME=/usr/lib/jvm/java-8-oracle &&  mvn exec:java -Dexec.mainClass=eu.infomas.research.orientdb.Main
+````
+
+or use the `orientdb-embedded-all-VERSION.jar` file in the target directory:
+
+````bash
+$ java -cp target/orientdb-embedded-all-2.0-M2.jar eu.infomas.research.orientdb.Main
 ````
 
 Both OrientDB and Maven report some warning, those warnings can be ignored.
